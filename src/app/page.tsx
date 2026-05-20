@@ -314,7 +314,7 @@ export default async function HomePage({ searchParams }: { searchParams: { page?
 </div>
 
                 {/* Download App */}
-                <div className="my-10">
+                {/* <div className="my-10">
                     <a href="https://play.google.com/store/apps/" target="_blank" rel="noopener noreferrer" className="flex items-center bg-pink-50 max-w-sm mx-auto rounded-xl p-4 border-2 border-pink-500/60 shadow-md hover:shadow-lg transition-shadow">
                         <img src="https://bakgroma.shop/assets/images/stores/DEU/google-play.png" alt="Google Play" className="h-[70px] mr-5" />
                         <div>
@@ -322,7 +322,7 @@ export default async function HomePage({ searchParams }: { searchParams: { page?
                             <p className="font-bold text-pink-600 mt-1">Download Now →</p>
                         </div>
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
         </>

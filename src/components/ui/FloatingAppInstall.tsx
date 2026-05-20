@@ -97,6 +97,9 @@ export default function FloatingAppInstall() {
      // fallback if showInstall got toggled
      setShowInstall(true)
   }
+// eta app ke hide korar jonnno likheci
+  return null;
+
 
   return (
     <AnimatePresence>
