@@ -24,19 +24,22 @@ shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-white/10">
     style={{ transform: `translateX(-${slideIndex * 100}%)` }}
   >
     {banners.map((img, i) => (
-      <div key={i} className="min-w-full relative">
+  <div key={i} className="min-w-full relative">
 
-        <img
-          src={`${process.env.NEXT_PUBLIC_BASE_URL}/storage/banner_images/${img}`}
-          alt={`Banner ${i}`}
-          className="w-full h-[180px] md:h-[360px] object-cover"
-        />
+    <div className="relative w-full aspect-[16/6] bg-gradient-to-br from-[#050816] to-[#0b1020] overflow-hidden">
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+      <img
+        src={`${process.env.NEXT_PUBLIC_BASE_URL}/storage/banner_images/${img}`}
+        alt={`Banner ${i}`}
+        className="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+      />
 
-      </div>
-    ))}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+    </div>
+
+  </div>
+))}
   </div>
 
   {/* LEFT BUTTON */}
