@@ -74,3 +74,9 @@ body.install-popup-visible #support-button {
 img.w-20.md\:w-20.h-15.object-contain.hover\:scale-105.transition {
     width: 7rem;
 }
+
+
+.font-primary {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+}

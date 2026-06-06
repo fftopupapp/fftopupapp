@@ -303,7 +303,7 @@ useEffect(() => {
     };
 
     return (
-        <div className="container mx-auto px-2 md:px-4 py-6 md:py-10 max-w-6xl bg-gradient-to-b from-[#070c18] via-[#0b1224] to-[#05070d] text-white">
+        <div className="container mx-auto px-2 md:px-4 py-6 md:py-10 bg-gradient-to-b from-[#070c18] via-[#0b1224] to-[#05070d] text-white">
             {/* Product Header */}
             <div className="bg-[#0f172a] border border-gray-800 rounded-2xl p-4 flex gap-4 items-center shadow-lg">
                <img 
@@ -381,7 +381,7 @@ useEffect(() => {
 </a>
 
   {/* BODY */}
-  <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+  <div className="p-3 md:p-4 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
     
     {inputFieldsRecharge.map((field: any, index: number) => {
       const isSelected = selectedRechargeIndex === index;
@@ -392,7 +392,7 @@ useEffect(() => {
           key={index}
           onClick={() => handleRechargeSelect(field, index)}
           disabled={isOutOfStock}
-          className={`relative flex items-center justify-between w-full px-4 py-3 rounded-xl border transition-all duration-300
+          className={`relative flex items-center justify-between w-full px-2 py-4 rounded-lg border transition-all duration-300
 
           ${isSelected
             ? "border-orange-500 bg-gradient-to-r from-slate-800 to-slate-700 shadow-md scale-[1.02]"
@@ -410,19 +410,31 @@ useEffect(() => {
           <div className="flex items-center gap-3">
 
             {/* Radio Circle */}
-            <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-300
-              ${isSelected
-                ? "border-orange-500 bg-orange-500 shadow-md"
-                : "border-slate-500"
+            <div
+              className={`w-[10px] h-[10px] rounded-full flex items-center justify-center border transition
+              ${
+                isSelected
+                  ? "border-orange-500 bg-orange-500 shadow-md"
+                  : "border-slate-500"
               }`}
             >
-              {isSelected && (
-                <span className="text-white text-xs">✔</span>
-              )}
+               {isSelected && (
+                <svg
+                  className="w-[10px] h-[10px] text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.704 5.29a1 1 0 010 1.42l-7.2 7.2a1 1 0 01-1.42 0l-3.2-3.2a1 1 0 111.42-1.42l2.49 2.49 6.49-6.49a1 1 0 011.42 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                )}
             </div>
 
             {/* Title */}
-            <span className={`font-medium text-sm transition-colors
+            <span className={`text-[12px] font-primary transition-colors
               ${isSelected ? "text-white" : "text-slate-300"}
             `}>
               {field.type}
@@ -430,7 +442,7 @@ useEffect(() => {
           </div>
 
           {/* PRICE */}
-          <span className="text-orange-400 font-semibold text-sm">
+          <span className="text-orange-400 text-[12px] font-primary font-bold text-sm">
             {field.currency_amount} ৳
           </span>
 
