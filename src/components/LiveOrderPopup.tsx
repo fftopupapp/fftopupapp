@@ -80,6 +80,9 @@ export default function LiveOrderPopup() {
     return () => clearInterval(interval);
   }, []);
 
+  // eta popup ke hide korar jonnno likheci
+  return null;
+
   return (
     <>
       <audio ref={audioRef} src="/sounds/notify.mp3" />
